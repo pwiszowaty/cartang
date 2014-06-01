@@ -1,0 +1,37 @@
+[
+	{
+		"name": "iPad 1",
+     	"snippet": "Not so cool, not so thin. Cheap!",
+  	 	"price": 300
+  	},
+	{
+		"name": "iPad 2",
+     	"snippet": "Cooler and thiner.",
+  	 	"price": 600
+  	},
+	{
+		"name": "iPad 3 4g",
+     	"snippet": "So sweet!",
+  	 	"price": 720
+  	},
+	{
+		"name": "uPad 7",
+     	"snippet": "MUSTHAVE!",
+  	 	"price": 120
+  	},
+	{
+		"name": "Nexus S",
+     	"snippet": "Fast just got faster with Nexus S.",
+  	 	"price": 300
+  	},
+    {
+    	"name": "Motorola XOOM™ with Wi-Fi",
+     	"snippet": "The Next, Next Generation tablet.",
+ 	 	"price": 100
+ 	},
+    {
+    	"name": "MOTOROLA XOOM™",
+     	"snippet": "The Next, Next Generation tablet.",
+ 	 	"price": 200
+ 	}
+]

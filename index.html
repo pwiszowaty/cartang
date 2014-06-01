@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="cartangApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +10,48 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+        <script src="js/controllers.js"></script>
     </head>
-    <body>
+    <body ng-controller="ProductListCtrl">
+
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <p>Nothing here {{'yet' + '!'}}</p>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+		        	<p>Search: <input ng-model="query"></p>
+
+					<select ng-model="orderProp">
+						<option value="name">Alphabetical</option>
+						<option value="price">Price - cheapest first</option>
+						<option value="-price">Price - cheapest last</option>
+					</select>
+				</div>
+				<div class="col-md-10">
+
+					<h1>Available products:</h1>
+
+					<ul>
+						<li ng-repeat="item in products | filter:query | orderBy:orderProp">
+							{{item.name}}
+							<p>{{item.snippet}}</p>
+							<p>Price: <span class="price">{{item.price}}</span></p>
+						</li>
+					</ul>
+			
+
+					<p>Total items: <span ng-bind-template="{{products.length}}">0</span>. <span ng-bind-template="Filters: {{query || 'none'}}.">Filters: none.</span></p>
+				</div>
+			</div>
+		</div>
+
+		<small>*psst!* there's a hidden debug here!</small>
+		<!-- for debug purposes: show this div -->
+		<div class="" style="display: none;">
+			<pre>{{products | json}}</pre>
+		</div>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
