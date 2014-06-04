@@ -1,37 +1,51 @@
 [
 	{
+    "id":"ipad-1",
 		"name": "iPad 1",
-     	"snippet": "Not so cool, not so thin. Cheap!",
-  	 	"price": 300
-  	},
+    "snippet": "Not so cool, not so thin. Cheap!",
+  	"price": 300,
+    "img": "img/img1.jpg"
+  },
 	{
+    "id":"ipad-2",
 		"name": "iPad 2",
-     	"snippet": "Cooler and thiner.",
-  	 	"price": 600
-  	},
+    "snippet": "Cooler and thiner.",
+  	"price": 600,
+    "img": "img/img2.jpg"
+  },
 	{
+    "id":"ipad-3-4g",
 		"name": "iPad 3 4g",
-     	"snippet": "So sweet!",
-  	 	"price": 720
-  	},
+    "snippet": "So sweet!",
+  	"price": 720,
+    "img": "img/img3.png"
+  },
 	{
+    "id":"upad-7",
 		"name": "uPad 7",
-     	"snippet": "MUSTHAVE!",
-  	 	"price": 120
-  	},
+    "snippet": "MUSTHAVE!",
+  	"price": 120,
+    "img": "img/img4.png"
+  },
 	{
+    "id":"nexus-5",
 		"name": "Nexus S",
-     	"snippet": "Fast just got faster with Nexus S.",
-  	 	"price": 300
-  	},
-    {
-    	"name": "Motorola XOOM™ with Wi-Fi",
-     	"snippet": "The Next, Next Generation tablet.",
- 	 	"price": 100
+    "snippet": "Fast just got faster with Nexus S.",
+  	"price": 300,
+    "img": "img/img5.png"
+  },
+  {
+    "id":"motorola-xoom-with-wifi",
+    "name": "Motorola XOOM™ with Wi-Fi",
+    "snippet": "The Next, Next Generation tablet.",
+ 	 	"price": 100,
+    "img": "img/img5.png"
  	},
-    {
-    	"name": "MOTOROLA XOOM™",
-     	"snippet": "The Next, Next Generation tablet.",
- 	 	"price": 200
+  {
+    "id":"motorola-xoom",
+    "name": "MOTOROLA XOOM™",
+    "snippet": "The Next, Next Generation tablet.",
+ 	 	"price": 200,
+    "img": "img/img5.png"
  	}
 ]

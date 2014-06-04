@@ -34,8 +34,9 @@
 					<h1>Available products:</h1>
 
 					<ul>
-						<li ng-repeat="item in products | filter:query | orderBy:orderProp">
-							{{item.name}}
+						<li ng-repeat="item in products | filter:query | orderBy:orderProp" class="thumbnail">
+							<a href="#/products/{{item.id}}"><img style="width:200px; height: auto;" ng-src="{{item.img}}"></a>
+							<a href="#/products/{{item.id}}">{{item.name}}</a>
 							<p>{{item.snippet}}</p>
 							<p>Price: <span class="price">{{item.price}}</span></p>
 						</li>
