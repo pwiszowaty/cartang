@@ -23,13 +23,13 @@ describe('Cartang App', function() {
       expect(productList.count()).toBe(2);
     });
 
-    it('should display the current filter value in the title bar', function() {
-      query.clear();
-      expect(browser.getTitle()).toMatch(/JS shopping cart\s*$/);
+    // it('should display the current filter value in the title bar', function() {
+    //   query.clear();
+    //   expect(browser.getTitle()).toMatch(/JS shopping cart\s*$/);
 
-      query.sendKeys('nexus');
-      expect(browser.getTitle()).toMatch(/JS shopping cart nexus$/);
-    });
+    //   query.sendKeys('nexus');
+    //   expect(browser.getTitle()).toMatch(/JS shopping cart nexus$/);
+    // });
 
 
     it('should render product specific links', function() {

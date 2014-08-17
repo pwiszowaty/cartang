@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+        	<p>Search: <input ng-model="query"></p>
+
+			<select ng-model="orderProp">
+				<option value="name">Alphabetical</option>
+				<option value="price">Price - cheapest first</option>
+				<option value="-price">Price - cheapest last</option>
+			</select>
+		</div>
+		<div class="col-md-10">
+
+			<h1>Available products:</h1>
+
+			<ul class="products">
+				<li ng-repeat="product in products | filter:query | orderBy:orderProp" class="thumbnail">
+					<a href="#/products/{{product.id}}"><img style="width:200px; height: auto;" ng-src="{{product.img}}"></a>
+					<a href="#/products/{{product.id}}">{{product.name}}</a>
+					<p>{{product.snippet}}</p>
+					<p>Price: <span class="price" ng-bind-template="{{product.price}}">N/A</span></p>
+				</li>
+			</ul>
+	
+
+			<p>Total products: <span ng-bind-template="{{products.length}}">0</span>. <span ng-bind-template="Filters: {{query || 'none'}}.">Filters: none.</span></p>
+		</div>
+	</div>
+</div>
+
+<small>*psst!* there's a hidden debug here!</small>
+<!-- for debug purposes: show this div -->
+<div class="" style="display: none;">
+	<pre>{{products | json}}</pre>
+</div>
