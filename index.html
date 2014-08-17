@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" ng-app="cartangApp">
+<html lang="en" ng-app="cartangApp" ng-controller="ProductListCtrl">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>JS shopping cart</title>
+        <title>JS shopping cart {{query}}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
         <script src="js/controllers.js"></script>
     </head>
-    <body ng-controller="ProductListCtrl">
+    <body>
 
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -33,17 +33,17 @@
 
 					<h1>Available products:</h1>
 
-					<ul>
-						<li ng-repeat="item in products | filter:query | orderBy:orderProp" class="thumbnail">
-							<a href="#/products/{{item.id}}"><img style="width:200px; height: auto;" ng-src="{{item.img}}"></a>
-							<a href="#/products/{{item.id}}">{{item.name}}</a>
-							<p>{{item.snippet}}</p>
-							<p>Price: <span class="price">{{item.price}}</span></p>
+					<ul class="products">
+						<li ng-repeat="product in products | filter:query | orderBy:orderProp" class="thumbnail">
+							<a href="#/products/{{product.id}}"><img style="width:200px; height: auto;" ng-src="{{product.img}}"></a>
+							<a href="#/products/{{product.id}}">{{product.name}}</a>
+							<p>{{product.snippet}}</p>
+							<p>Price: <span class="price" ng-bind-template="{{product.price}}">N/A</span></p>
 						</li>
 					</ul>
 			
 
-					<p>Total items: <span ng-bind-template="{{products.length}}">0</span>. <span ng-bind-template="Filters: {{query || 'none'}}.">Filters: none.</span></p>
+					<p>Total products: <span ng-bind-template="{{products.length}}">0</span>. <span ng-bind-template="Filters: {{query || 'none'}}.">Filters: none.</span></p>
 				</div>
 			</div>
 		</div>
